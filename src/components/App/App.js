@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import GalleryList from '../galleryList/galleryList';
 
 class App extends Component {
   render() {
@@ -9,8 +10,7 @@ class App extends Component {
           <h1 className="App-title">Gallery of my life</h1>
         </header>
         <br/>
-        <p>Gallery goes here</p>
-        <img src="images/goat_small.jpg"/>
+        <GalleryList/>
       </div>
     );
   }

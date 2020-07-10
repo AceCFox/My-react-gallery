@@ -5,8 +5,9 @@ const galleryItems = [
     { id: 4, path: 'images/derbyWedding.jpg', description: 'My derby weddding with my now real-wife, Robin', likes: 0 },
     { id: 5, path: 'images/firstAniversary.jpg', description: 'First aniversary with Robin, surrey at Minnehaha falls', likes: 0},
     { id: 6, path: 'images/gay.jpg', description: 'Rockits WIN the Golden Skate 2020', likes: 0 },
-    { id: 7, path: 'StaceysWedding.jpg', description: 'My best friend, Staceys wedding', likes: 0 }
-
+    { id: 7, path: 'images/StaceysWedding.jpg', description: 'My best friend, Staceys wedding', likes: 0 },
+    { id: 8, path: 'images/Haircut.jpg', description:'My favorite haircut!', likes: 0 },
+    { id: 9, path: 'images/Rollercon.jpg', description: 'Getting my butt kicked by Tenacity at Rollercon', likes:0 }
 ];
 
 module.exports = galleryItems;
