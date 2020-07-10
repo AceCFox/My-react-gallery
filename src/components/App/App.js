@@ -1,8 +1,41 @@
 import React, { Component } from 'react';
 import './App.css';
+import axios from 'axios';
 import GalleryList from '../galleryList/galleryList';
 
+
+
 class App extends Component {
+
+  state = {
+    gallery: [],
+  }
+
+  componentDidMount() {
+    //runs getGallery so we can load our page with images!
+    this.getGallery();
+  }
+  
+  getGallery = () =>{
+  console.log('in getGallery')
+    console.log('in get students');
+      axios({
+        method: 'GET',
+        url: '/gallery',
+      }).then((response) => {
+          this.setState({
+            gallery: response.data,
+          });
+          console.log('got gallery list from server', response.data);
+      }).catch((error) => {
+          alert('error on GET');
+          console.log(error);
+      }) //end axios 
+  
+  
+  }
+
+
   render() {
     return (
       <div className="App">

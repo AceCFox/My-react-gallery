@@ -3,7 +3,7 @@
 [x] create components galleryList and galleryItem
 
 [x] new branch for display
-[] set up a axios get call to retrieve data from /gallery and store it in app.js
+[x] set up a axios get call to retrieve data from /gallery and store it in app.js
 [] send galary data to component galleryList via props
 [] on galleryList map through galleryItems, send data as props
 [] add a "like" button to each gallery item
