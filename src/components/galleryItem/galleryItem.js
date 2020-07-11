@@ -6,7 +6,6 @@ class GalleryItem extends Component {
 
     state = {
         clicked: true,
-        likes: 0
     }//end state
 
     handleLike = (event) => {
@@ -16,13 +15,8 @@ class GalleryItem extends Component {
 
         axios.put('/gallery/like/' + id)
         .then( (response) =>{
-            console.log('back from PUT with', response);
-            this.setState({
-                ...this.state.clicked,
-                likes: this.state.likes+1,
-            })
-
-           // this.props.getGallery();
+        console.log('back from PUT with response:', response);
+           this.props.getGallery();
         }).catch( ( error )=>{
             console.log('error on PUT:', error);
             alert('error on PUT!');
@@ -55,7 +49,7 @@ class GalleryItem extends Component {
         <div className = "desc">
             <button onClick = {this.handleLike}> 
             like this photo</button>
-             <p>Likes: {this.state.likes}</p>
+             <p>Likes: {this.props.thisItem.likes}</p>
         </div>
         </div>
         
