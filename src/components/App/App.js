@@ -25,7 +25,7 @@ class App extends Component {
       this.setState({
         gallery: response.data,
       });
-      console.log('got gallery list from server', response.data);
+      console.log('got gallery list from server -', response.data.length, "photos");
   }).catch((error) => {
       alert('error on GET');
       console.log(error);
@@ -35,7 +35,7 @@ class App extends Component {
   likeItem = ( id ) => {
     axios.put('/gallery/like/' + id)
         .then( (response) =>{
-        console.log('back from PUT with response:', response);
+        console.log('back from PUT with response:', response.status);
            this.getGallery();
         }).catch( ( error )=>{
             console.log('error on PUT:', error);

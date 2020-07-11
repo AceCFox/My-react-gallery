@@ -16,11 +16,11 @@
 [x] on click, like count ++
 [x] merge with master branch
 
-[] new branch for full stack
-[] move the Put call to app.js, and make sure it is functioning
-[] build a server in postico and populate it with the gallery
-[] adjust the server get and put routes to make database queries
-[] make a database.sql file to include the sql commands neccessary to build the database
+[x] new branch for full stack
+[x] move the Put call to app.js, and make sure it is functioning
+[x] build a server in postico and populate it with the gallery
+[x] adjust the server get and put routes to make database queries
+[x] make a database.sql file to include the sql commands neccessary to build the database
 [] merge with master branch
 
 [] new branch for POST
