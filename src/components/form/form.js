@@ -8,7 +8,7 @@ class Form extends Component {
     state = {
         path:'',
         description:'',
-    }
+    }//end state
     
     handleChange = (event, key) => {
        // console.log('in handleChange:', key);
@@ -16,8 +16,8 @@ class Form extends Component {
         this.setState({
             ...this.state,
             [key]: event.target.value
-        })
-    }
+        })//end this setState
+    }//handleChange
 
     handleSubmit = (event) => {
         event.preventDefault();

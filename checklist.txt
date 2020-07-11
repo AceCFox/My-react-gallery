@@ -31,13 +31,13 @@
 [x] build a POST route with a query to add a new gallery item with likes:0
 [x] send an axios POST request to this route from form.js
 [x] pass the GET containing function to form.js component via props
-[] verify that it works then merge with master branch
+[x] verify that it works then merge with master branch
 
-[] new branch for DELETE
-[] build a DELETE route
-[] add a delete button to each gallery item with click handler
-[] send an axios DELTE call within app.js and send function to galleryItem.js via props
-[] verify successful delete -bye goat
+[x] new branch for DELETE
+[x] build a DELETE route
+[x] add a delete button to each gallery item with click handler
+[x] send an axios DELTE call within app.js and send function to galleryItem.js via props
+[x] verify successful delete -bye goat
 [] merge with master branch
 
 [] new branch for Material-UI 

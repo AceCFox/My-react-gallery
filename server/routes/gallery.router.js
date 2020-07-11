@@ -3,7 +3,8 @@ const router = express.Router();
 const galleryItems = require('../modules/gallery.data');
 
 // DB CONNECTION
-const pool = require( './pool' )
+const pool = require( './pool' );
+const { query } = require('./pool');
 
 // DO NOT MODIFY THIS FILE FOR BASE MODE
 
@@ -45,5 +46,19 @@ router.post('/', (req, res) => {
         res.sendStatus( 500 )
     }) //end query
 })//end POST
+
+//DELETE Route
+router.delete('/:id', (req,res)=>{
+    console.log(req.params.id) 
+    let queryString = `DELETE FROM "gallery" WHERE id = $1 ;`;
+    //query delete
+    pool.query ( queryString, [req.params.id]  )
+    .then( (result )=>{
+        res.sendStatus(201);
+    }).catch( (error) =>{
+        console.log(error);
+        res.sendStatus(500);
+    })//end query
+})//end DELETE
 
 module.exports = router;

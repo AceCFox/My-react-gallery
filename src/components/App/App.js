@@ -18,20 +18,20 @@ class App extends Component {
   }//end did mount
   
   getGallery = () =>{
-  console.log('in getGallery');
-  axios({
-    method: 'GET' ,
-    url: '/gallery',
-  }).then((response) => {
-      this.setState({
-        gallery: response.data,
-      });
-      console.log('got gallery list from server -', response.data.length, "photos");
-  }).catch((error) => {
-      alert('error on GET');
-      console.log(error);
-  }) //end axios GET
-  }//end getGallery
+    console.log('in getGallery');
+    axios({
+      method: 'GET' ,
+      url: '/gallery',
+    }).then((response) => {
+        this.setState({
+          gallery: response.data,
+        });
+        console.log('got gallery list from server -', response.data.length, "photos");
+    }).catch((error) => {
+        alert('error on GET');
+        console.log(error);
+    }) //end axios GET
+ }//end getGallery
 
   likeItem = ( id ) => {
     axios({
@@ -44,9 +44,21 @@ class App extends Component {
       console.log('error on PUT:', error);
       alert('error on PUT!');
     } )//end axios PUT call
-  }
+  }//end likeItem
 
-
+  deleteItem = ( id ) => {
+    console.log('in deleteItem');
+    axios({
+      method: 'DELETE',
+      url: 'gallery/' + id,
+    }).then( (response) => {
+      console.log('back from DELETE call with:', response.statusText);
+      this.getGallery();
+    }).catch( (error) =>{
+      console.log('error on DELETE', error);
+      alert('bad DELETE call');
+    })//end axios DELETE call
+  }//end deleteItem
 
   render() {
     return (
@@ -58,10 +70,11 @@ class App extends Component {
         <Form getGallery ={this.getGallery}/>
         <br/>
         <GalleryList gallery = {this.state.gallery} 
-        likeItem = {this.likeItem}/>
+        likeItem = {this.likeItem}
+        deleteItem = {this.deleteItem}/>
       </div>
-    );
-  }
-}
+    );//end return
+  }//end render
+}//end component
 
 export default App;
