@@ -12,15 +12,8 @@ class GalleryItem extends Component {
         event.preventDefault()
         let id = this.props.thisItem.id;
         //console.log(id)
-
-        axios.put('/gallery/like/' + id)
-        .then( (response) =>{
-        console.log('back from PUT with response:', response);
-           this.props.getGallery();
-        }).catch( ( error )=>{
-            console.log('error on PUT:', error);
-            alert('error on PUT!');
-        } )//end axios PUT call
+        this.props.likeItem (id);
+        
     }//end handleLike
 
     handleCLick = (event) => {
