@@ -21,7 +21,7 @@
 [x] build a server in postico and populate it with the gallery
 [x] adjust the server get and put routes to make database queries
 [x] make a database.sql file to include the sql commands neccessary to build the database
-[] merge with master branch
+[x] merge with master branch
 
 [] new branch for POST
 [] add a component form.js
