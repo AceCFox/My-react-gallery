@@ -15,3 +15,32 @@
 [x] set up an axios PUT call on app.js and pass to galleryItem via props
 [x] on click, like count ++
 [x] merge with master branch
+
+[x] new branch for full stack
+[x] move the Put call to app.js, and make sure it is functioning
+[x] build a server in postico and populate it with the gallery
+[x] adjust the server get and put routes to make database queries
+[x] make a database.sql file to include the sql commands neccessary to build the database
+[] merge with master branch
+
+[] new branch for POST
+[] add a component form.js
+[] build framework for form that allows a user to input a new photo with description
+    [] two inputs with a button with click handler
+[] build a POST route with a query to add a new gallery item with id: galleryItems.length, likes:0
+[] send an axios POST request to this route from app.js
+[] pass the comntaining function to form.js component via props
+[] verify that it works then merge with master branch
+
+[] new branch for DELETE
+[] build a DELETE route
+[] add a delete button to each gallery item with click handler
+[] send an axios DELTE call within app.js and send function to galleryItem.js via props
+[] verify successful delete -bye goat
+[] merge with master branch
+
+[] new branch for Material-UI 
+[] do 1 hour of research on Material-UI
+[] source it in a vendors folder
+[] use it to do some cool stuff: (outline after research)
+....
