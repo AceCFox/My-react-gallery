@@ -23,10 +23,10 @@
 [x] make a database.sql file to include the sql commands neccessary to build the database
 [x] merge with master branch
 
-[] new branch for POST
-[] add a component form.js
-[] build framework for form that allows a user to input a new photo with description
-    [] two inputs with a button with click handler
+[x] new branch for POST
+[x] add a component form.js
+[x] build framework for form that allows a user to input a new photo with description
+    [x] two inputs with a button with click handler
 [] build a POST route with a query to add a new gallery item with id: galleryItems.length, likes:0
 [] send an axios POST request to this route from app.js
 [] pass the comntaining function to form.js component via props
