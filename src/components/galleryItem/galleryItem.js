@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 //import axios from 'axios';
 import './galleryItem.css'
-
+ 
 class GalleryItem extends Component {
 
     state = {

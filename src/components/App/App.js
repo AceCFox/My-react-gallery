@@ -34,14 +34,16 @@ class App extends Component {
   }//end getGallery
 
   likeItem = ( id ) => {
-    axios.put('/gallery/like/' + id)
-        .then( (response) =>{
-        console.log('back from PUT with response:', response.status);
-           this.getGallery();
-        }).catch( ( error )=>{
-            console.log('error on PUT:', error);
-            alert('error on PUT!');
-        } )//end axios PUT call
+    axios({
+      method:'PUT',
+      url: '/gallery/like/' + id,
+    }).then( (response) =>{
+      console.log('back from PUT with response:', response.statusText);
+      this.getGallery();
+    }).catch( ( error )=>{
+      console.log('error on PUT:', error);
+      alert('error on PUT!');
+    } )//end axios PUT call
   }
 
 
@@ -53,7 +55,7 @@ class App extends Component {
           <h1 className="App-title">Gallery of my life</h1>
         </header>
         <br/>
-        <Form/>
+        <Form getGallery ={this.getGallery}/>
         <br/>
         <GalleryList gallery = {this.state.gallery} 
         likeItem = {this.likeItem}/>
