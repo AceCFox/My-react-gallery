@@ -4,14 +4,14 @@
 
 [x] new branch for display
 [x] set up a axios get call to retrieve data from /gallery and store it in app.js
-[] send galary data to component galleryList via props
-[] on galleryList map through galleryItems, send data as props
-[] add a "like" button to each gallery item
-[] merge with master branch
+[x] send galary data to component galleryList via props
+[x] on galleryList map through galleryItems, send data as props
+[x] add a "like" button to each gallery item
+[x] merge with master branch
 
-[] new branch for conditional 
+[x] new branch for conditional 
 [] when image is clicked, swap image with description
-[] display like count below galleryItems
+[x] display like count below galleryItems
 [] set up an adious PUT call on app.js and pass to galleryItem via props
 [] on click, like count ++
 [] merge with master branch
