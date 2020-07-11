@@ -5,7 +5,8 @@ class GalleryList extends Component {
     render() {
       return (
         <div className="galleryList" >
-            { this.props.gallery.map( ( item, index )=><GalleryItem thisItem={ item } key={ index }/>)}
+            { this.props.gallery.map( ( item, index )=><GalleryItem 
+            thisItem={ item } key={ index } />)}
         </div>
       );
     }

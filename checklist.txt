@@ -10,8 +10,8 @@
 [x] merge with master branch
 
 [x] new branch for conditional 
-[] when image is clicked, swap image with description
+[x] when image is clicked, swap image with description
 [x] display like count below galleryItems
-[] set up an adious PUT call on app.js and pass to galleryItem via props
+[] set up an axios PUT call on app.js and pass to galleryItem via props
 [] on click, like count ++
 [] merge with master branch

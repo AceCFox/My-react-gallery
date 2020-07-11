@@ -1,14 +1,32 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import './galleryItem.css'
 
 class GalleryItem extends Component {
 
     state = {
         clicked: true,
+        likes: 0
     }//end state
 
     handleLike = (event) => {
-        console.log('you liked photo #', this.props.thisItem.id );
+        event.preventDefault()
+        let id = this.props.thisItem.id;
+        //console.log(id)
+
+        axios.put('/gallery/like/' + id)
+        .then( (response) =>{
+            console.log('back from PUT with', response);
+            this.setState({
+                ...this.state.clicked,
+                likes: this.state.likes+1,
+            })
+
+           // this.props.getGallery();
+        }).catch( ( error )=>{
+            console.log('error on PUT:', error);
+            alert('error on PUT!');
+        } )//end axios PUT call
     }//end handleLike
 
     handleCLick = (event) => {
@@ -20,6 +38,7 @@ class GalleryItem extends Component {
 
 
     render() {
+        //conditionally set variable to render either photo or description
         let photo;
         if (this.state.clicked){
             photo = 
@@ -34,10 +53,9 @@ class GalleryItem extends Component {
             
         {photo}
         <div className = "desc">
-            <button onClick = {this.handleLike} >:
-            
+            <button onClick = {this.handleLike}> 
             like this photo</button>
-             <p>Likes: {this.props.thisItem.likes}</p>
+             <p>Likes: {this.state.likes}</p>
         </div>
         </div>
         

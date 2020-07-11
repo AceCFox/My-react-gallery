@@ -14,26 +14,24 @@ class App extends Component {
   componentDidMount() {
     //runs getGallery so we can load our page with images!
     this.getGallery();
-  }
+  }//end did mount
   
   getGallery = () =>{
-  console.log('in getGallery')
-    console.log('in get students');
-      axios({
-        method: 'GET',
-        url: '/gallery',
-      }).then((response) => {
-          this.setState({
-            gallery: response.data,
-          });
-          console.log('got gallery list from server', response.data);
-      }).catch((error) => {
-          alert('error on GET');
-          console.log(error);
-      }) //end axios 
-  
-  
-  }
+  console.log('in getGallery');
+  axios({
+    method: 'GET' ,
+    url: '/gallery',
+  }).then((response) => {
+      this.setState({
+        gallery: response.data,
+      });
+      console.log('got gallery list from server', response.data);
+  }).catch((error) => {
+      alert('error on GET');
+      console.log(error);
+  }) //end axios GET
+  }//end getGallery
+
 
 
   render() {
@@ -43,7 +41,7 @@ class App extends Component {
           <h1 className="App-title">Gallery of my life</h1>
         </header>
         <br/>
-        <GalleryList gallery = {this.state.gallery}/>
+        <GalleryList gallery = {this.state.gallery} />
       </div>
     );
   }

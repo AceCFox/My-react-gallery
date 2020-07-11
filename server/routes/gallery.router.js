@@ -10,7 +10,7 @@ router.put('/like/:id', (req, res) => {
     const galleryId = req.params.id;
     for(const galleryItem of galleryItems) {
         if(galleryItem.id == galleryId) {
-            galleryItem.likes += 1;
+            galleryItem.likes ++;
         }
     }
     res.sendStatus(200);
