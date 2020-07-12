@@ -80,12 +80,14 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Gallery of my life</h1>
+          <h1 className="App-title">Gallery Ace</h1>
         </header>
         <br/>
+        {/*send post function to form so it can access*/}
         <Form postItem = {this.postItem}/>
         <br/>
         <div id = "gallery">
+          {/*send gallery, like and delete to gallery list for access*/}
           <GalleryList gallery = {this.state.gallery} 
           likeItem = {this.likeItem}
           deleteItem = {this.deleteItem}/>

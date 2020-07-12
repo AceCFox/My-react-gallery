@@ -24,8 +24,8 @@ class Form extends Component {
         event.preventDefault();
        // console.log('in handleSubmit');
         console.log('current state:', this.state)
-        //call axios POST to send data from state to server as a new item
-        //indclude this.props.getGallery() call upon response
+        //call postItem function from props to pass the state object through the axios call
+        //the postItme function lives on app.js
         this.props.postItem(this.state);
         //set state back to empty strings to clear inputs
         this.setState({
@@ -40,6 +40,8 @@ class Form extends Component {
             <div className="Form">
                 <h2>Add a new photo </h2>
                 <form>
+                    {/* inputs below will update state when changed and respond to changes to state 
+                    (they will clear when state is cleared in handleSubmit)*/}
                     <TextField id="path" label="Image URL"
                         onChange = {event =>this.handleChange(event, 'path')}
                         value = {this.state.path}/>

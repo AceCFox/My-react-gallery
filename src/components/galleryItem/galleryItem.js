@@ -21,8 +21,7 @@ class GalleryItem extends Component {
         const id = this.props.thisItem.id;
         //console.log(id)
         //likeItems is passed from app as props, and contains our PUT call
-        this.props.likeItem (id);
-        
+        this.props.likeItem (id); 
     }//end handleLike
 
     handleCLick = (event) => {
@@ -57,21 +56,35 @@ class GalleryItem extends Component {
                 </div>
         }//end conditional
 
+        //conditionally set loved statement to unliked/singular/plural messages
+        let loved;
+        if (this.props.thisItem.likes === 0 ){
+            loved = <p>Be the first to send some love</p>;
+        } else if (this.props.thisItem.likes === 1 ){
+            loved = <p>Loved {this.props.thisItem.likes} time</p>;
+        } else {
+            loved = <p>Loved {this.props.thisItem.likes} times</p>;
+        }//end conditional
+
       return (
         <Card className='galleryItem'>
             <CardActionArea onClick = {this.handleCLick}>
+                {/*display either photo or description depedning on state
+                handleClick function toggles state when this photo/description is clicked*/}
                 {photo}
             </CardActionArea>
             <CardContent>
+                {/*icon buttons below are sourced from MUI and will run the delete and like calls
+                passed as props from grandparent app.js*/}
                 <IconButton color="secondary" aria-label="like" onClick = {this.handleLike}>
                 <FavoriteIcon  />
                 </IconButton> 
                 <IconButton aria-label="delete" onClick = {this.handleDeleteClick} >
                 <DeleteIcon />
                 </IconButton>
-                <p>Loved {this.props.thisItem.likes} times</p>
+                {/*display loved message, conditionally dependant on number of likes*/}
+                {loved}
             </CardContent>
-        
         </Card>
       );
     }
