@@ -26,7 +26,12 @@ class Form extends Component {
         console.log('current state:', this.state)
         //call axios POST to send data from state to server as a new item
         //indclude this.props.getGallery() call upon response
-       this.props.postItem(this.state);
+        this.props.postItem(this.state);
+        //set state back to empty strings to clear inputs
+        this.setState({
+            path: '',
+            description: ''
+        })//end setState
     }//end handleSubmit
 
 

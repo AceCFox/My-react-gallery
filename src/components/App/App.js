@@ -70,11 +70,6 @@ class App extends Component {
         //run get request to update changes on DOM
         this.getGallery();
         console.log('back from server POST with', response.statusText);
-        //set state back to empty strings to clear inputs
-        this.setState({
-            path: '',
-            description: ''
-        })//end setState
     }).catch((error) => {
         alert('error on POST');
         console.log(error);
