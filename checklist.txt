@@ -40,8 +40,14 @@
 [x] verify successful delete -bye goat
 [x] merge with master branch
 
-[] new branch for Material-UI 
-[] do 1 hour of research on Material-UI
-[] source it in a vendors folder
-[] use it to do some cool stuff: (outline after research)
+[x] new branch for Material-UI 
+[x] do 1 hour of research on Material-UI
+[x] install it!
+[x] use it to do some cool stuff: (outline after research)
+[x] buttons
+[x] rainbow background
+[x] grid
+[x] input
+[] optimize - move the POST call to app.js and pass with props
+[] merge with master branch when satisfied
 ....

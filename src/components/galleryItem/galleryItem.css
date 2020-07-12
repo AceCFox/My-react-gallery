@@ -1,22 +1,10 @@
-.galleryItem{
-    background-color: aqua;
-    margin: 5px;
-    border: 1px solid #ccc;
-    float: left;
-    width: 180px;
+img {
+    height: 250px;
+    width: auto;
 }
 
-.galleryItem img {
-    width: 100%;
-    height: auto;
-}
-
-div.desc {
-  padding: 15px;
-  text-align: center;
-}
-
-.description button{
-  background-color: pink;
-  color: black
+.description{
+  width: 200px;
+  padding: 10px;
+  margin-bottom: 10px;
 }

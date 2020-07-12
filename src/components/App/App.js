@@ -16,6 +16,7 @@ class App extends Component {
     //runs getGallery so we can load our page with images!
     this.getGallery();
   }//end did mount
+
   
   getGallery = () =>{
     console.log('in getGallery');
@@ -60,6 +61,26 @@ class App extends Component {
     })//end axios DELETE call
   }//end deleteItem
 
+  postItem = ( object ) => {
+    axios({
+        method: 'POST' ,
+        url: '/gallery',
+        data: object
+     }).then((response) => {
+        //run get request to update changes on DOM
+        this.getGallery();
+        console.log('back from server POST with', response.statusText);
+        //set state back to empty strings to clear inputs
+        this.setState({
+            path: '',
+            description: ''
+        })//end setState
+    }).catch((error) => {
+        alert('error on POST');
+        console.log(error);
+    }) //end axios POST
+  }//end postItem
+
   render() {
     return (
       <div className="App">
@@ -67,11 +88,13 @@ class App extends Component {
           <h1 className="App-title">Gallery of my life</h1>
         </header>
         <br/>
-        <Form getGallery ={this.getGallery}/>
+        <Form postItem = {this.postItem}/>
         <br/>
-        <GalleryList gallery = {this.state.gallery} 
-        likeItem = {this.likeItem}
-        deleteItem = {this.deleteItem}/>
+        <div id = "gallery">
+          <GalleryList gallery = {this.state.gallery} 
+          likeItem = {this.likeItem}
+          deleteItem = {this.deleteItem}/>
+        </div>
       </div>
     );//end return
   }//end render

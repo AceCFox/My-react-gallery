@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
-//import axios from 'axios';
 import './galleryItem.css'
- 
+import FavoriteIcon from '@material-ui/icons/Favorite'
+import { IconButton } from '@material-ui/core';
+import DeleteIcon from '@material-ui/icons/Delete';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+//import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+//import CardMedia from '@material-ui/core/CardMedia';
+
+
 class GalleryItem extends Component {
 
     state = {
@@ -34,31 +42,37 @@ class GalleryItem extends Component {
 
 
     render() {
+
         //conditionally set variable to render either photo or description
         let photo;
         if (this.state.clicked){
             photo = 
             <img src={this.props.thisItem.path} alt = {this.props.thisItem.description}
-            onClick = {this.handleCLick}/>
+            />
         } else {
             photo = 
                  <div className = "description">
-                    <h3 onClick = {this.handleCLick}>{this.props.thisItem.description}</h3>
-                    <button onClick = {this.handleDeleteClick}>delete this photo</button>
+                    <h3 >{this.props.thisItem.description}</h3>
                     <br/>
                 </div>
         }//end conditional
 
       return (
-        <div className='galleryItem'>
-            { photo }
-            <div className = "desc">
-                <button onClick = {this.handleLike}> 
-                Like it</button>
-                <p>Likes: {this.props.thisItem.likes}</p>
-            </div>
-        </div>
+        <Card className='galleryItem'>
+            <CardActionArea onClick = {this.handleCLick}>
+                {photo}
+            </CardActionArea>
+            <CardContent>
+                <IconButton color="secondary" aria-label="like" onClick = {this.handleLike}>
+                <FavoriteIcon  />
+                </IconButton> 
+                <IconButton aria-label="delete" onClick = {this.handleDeleteClick} >
+                <DeleteIcon />
+                </IconButton>
+                <p>Loved {this.props.thisItem.likes} times</p>
+            </CardContent>
         
+        </Card>
       );
     }
   }
