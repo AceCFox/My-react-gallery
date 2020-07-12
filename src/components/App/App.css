@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-image: linear-gradient(-45deg, red,orange,yellow,green,blue,indigo,violet);
 }
 
 .App-header {
@@ -17,7 +18,6 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+#gallery{
+  background-image: linear-gradient(-45deg, red,orange,yellow,green,blue,indigo,violet);
 }

@@ -1,5 +1,4 @@
 .galleryItem{
-    background-color: aqua;
     margin: 5px;
     border: 1px solid #ccc;
     float: left;
@@ -16,7 +15,4 @@ div.desc {
   text-align: center;
 }
 
-.description button{
-  background-color: pink;
-  color: black
-}
+

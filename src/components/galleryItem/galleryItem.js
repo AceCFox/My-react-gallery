@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-//import axios from 'axios';
 import './galleryItem.css'
- 
+import FavoriteIcon from '@material-ui/icons/Favorite'
+import { IconButton } from '@material-ui/core';
+import DeleteIcon from '@material-ui/icons/Delete';
+
+
 class GalleryItem extends Component {
 
     state = {
@@ -44,7 +47,6 @@ class GalleryItem extends Component {
             photo = 
                  <div className = "description">
                     <h3 onClick = {this.handleCLick}>{this.props.thisItem.description}</h3>
-                    <button onClick = {this.handleDeleteClick}>delete this photo</button>
                     <br/>
                 </div>
         }//end conditional
@@ -53,9 +55,13 @@ class GalleryItem extends Component {
         <div className='galleryItem'>
             { photo }
             <div className = "desc">
-                <button onClick = {this.handleLike}> 
-                Like it</button>
-                <p>Likes: {this.props.thisItem.likes}</p>
+            <IconButton color="secondary" aria-label="like" onClick = {this.handleLike}>
+            <FavoriteIcon  />
+            </IconButton> 
+            <IconButton aria-label="delete" onClick = {this.handleDeleteClick} >
+             <DeleteIcon />
+                </IconButton>
+                <p>Loved {this.props.thisItem.likes} times</p>
             </div>
         </div>
         
