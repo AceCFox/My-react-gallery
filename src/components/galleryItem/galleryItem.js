@@ -57,6 +57,16 @@ class GalleryItem extends Component {
                 </div>
         }//end conditional
 
+        //conditionally set loved statement to singular/ploral
+        let loved;
+        if (this.props.thisItem.likes ===0 ){
+            loved = <p>Be the first to send some love!</p>
+        } else if (this.props.thisItem.likes === 1 ){
+            loved = <p>Loved {this.props.thisItem.likes} time</p>
+        } else {
+            loved = <p>Loved {this.props.thisItem.likes} times</p>
+        }
+
       return (
         <Card className='galleryItem'>
             <CardActionArea onClick = {this.handleCLick}>
@@ -69,7 +79,7 @@ class GalleryItem extends Component {
                 <IconButton aria-label="delete" onClick = {this.handleDeleteClick} >
                 <DeleteIcon />
                 </IconButton>
-                <p>Loved {this.props.thisItem.likes} times</p>
+                {loved}
             </CardContent>
         
         </Card>

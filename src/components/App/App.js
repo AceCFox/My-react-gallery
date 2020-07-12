@@ -80,7 +80,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Gallery of my life</h1>
+          <h1 className="App-title">Gallery Ace</h1>
         </header>
         <br/>
         <Form postItem = {this.postItem}/>
