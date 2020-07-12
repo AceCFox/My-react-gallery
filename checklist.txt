@@ -47,5 +47,6 @@
 [x] buttons
 [x] rainbow background
 [] grid
+[] input
 [] merge with master branch when satisfied
 ....

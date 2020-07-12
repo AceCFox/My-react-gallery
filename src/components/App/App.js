@@ -69,9 +69,11 @@ class App extends Component {
         <br/>
         <Form getGallery ={this.getGallery}/>
         <br/>
+        <div id = "gallery">
           <GalleryList gallery = {this.state.gallery} 
           likeItem = {this.likeItem}
           deleteItem = {this.deleteItem}/>
+        </div>
       </div>
     );//end return
   }//end render

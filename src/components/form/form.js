@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './form.css';
 import axios from 'axios';
 import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
 
 
 class Form extends Component {
@@ -51,13 +52,13 @@ class Form extends Component {
             <div className="Form">
                 <h2>Add a new photo </h2>
                 <form>
-                    <input placeholder = "Image URL"
+                    <TextField id="path" label="Image URL"
                         onChange = {event =>this.handleChange(event, 'path')}
                         value = {this.state.path}/>
-                    <input placeholder = "Image description"
+                    <TextField id="description" label= "Image description"
                         onChange = {event =>this.handleChange(event, 'description')}
                         value = {this.state.description}/>
-                    <Button variant="contained"
+                    <Button variant="contained" size = "large" color = "primary"
                         onClick = {this.handleSubmit}>submit</Button>
                 </form>
             </div>
