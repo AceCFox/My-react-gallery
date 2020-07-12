@@ -1,10 +1,22 @@
+.galleryItem{
+  width: 220px;
+  height: 350px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+} 
+
 img {
-    height: 250px;
-    width: auto;
+    padding:5px;
+    height: 200px;
+    max-width: 210px;
 }
 
 .description{
   width: 200px;
-  padding: 10px;
-  margin-bottom: 10px;
+  padding-right: 10px;
+  margin-right: 10px;
+  height: 181px;
 }
+
+
+
