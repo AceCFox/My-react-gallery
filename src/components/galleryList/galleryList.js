@@ -15,6 +15,8 @@ class GalleryList extends Component {
         alignItems="flex-start"
         id = "rainbow"
       >
+      {/*map through gallery array to iterate a new Gallery Item component for each one,
+            pass props likeItem and deleteItem function from app.js to GalleryItem, so each iteration can call these*/}
             { this.props.gallery.map( ( item, index )=><GalleryItem 
             thisItem={ item } key={ index } 
             likeItem = {this.props.likeItem}

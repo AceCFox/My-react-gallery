@@ -48,6 +48,6 @@
 [x] rainbow background
 [x] grid
 [x] input
-[] optimize - move the POST call to app.js and pass with props
-[] merge with master branch when satisfied
+[x] optimize - move the POST call to app.js and pass with props
+[x] merge with master branch when satisfied
 ....
