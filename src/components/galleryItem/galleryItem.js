@@ -5,7 +5,7 @@ import { IconButton } from '@material-ui/core';
 import DeleteIcon from '@material-ui/icons/Delete';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
+//import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 //import CardMedia from '@material-ui/core/CardMedia';
 
@@ -48,29 +48,30 @@ class GalleryItem extends Component {
         if (this.state.clicked){
             photo = 
             <img src={this.props.thisItem.path} alt = {this.props.thisItem.description}
-            onClick = {this.handleCLick}/>
+            />
         } else {
             photo = 
                  <div className = "description">
-                    <h3 onClick = {this.handleCLick}>{this.props.thisItem.description}</h3>
+                    <h3 >{this.props.thisItem.description}</h3>
                     <br/>
                 </div>
         }//end conditional
 
       return (
         <Card className='galleryItem'>
-            <CardActionArea>
+            <CardActionArea onClick = {this.handleCLick}>
                 {photo}
-                <CardContent>
-                    <IconButton color="secondary" aria-label="like" onClick = {this.handleLike}>
-                    <FavoriteIcon  />
-                    </IconButton> 
-                    <IconButton aria-label="delete" onClick = {this.handleDeleteClick} >
-                    <DeleteIcon />
-                    </IconButton>
-                    <p>Loved {this.props.thisItem.likes} times</p>
+            </CardActionArea>
+            <CardContent>
+                <IconButton color="secondary" aria-label="like" onClick = {this.handleLike}>
+                <FavoriteIcon  />
+                </IconButton> 
+                <IconButton aria-label="delete" onClick = {this.handleDeleteClick} >
+                <DeleteIcon />
+                </IconButton>
+                <p>Loved {this.props.thisItem.likes} times</p>
             </CardContent>
-         </CardActionArea>
+        
         </Card>
       );
     }

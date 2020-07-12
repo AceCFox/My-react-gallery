@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './form.css';
-import axios from 'axios';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 
@@ -27,23 +26,7 @@ class Form extends Component {
         console.log('current state:', this.state)
         //call axios POST to send data from state to server as a new item
         //indclude this.props.getGallery() call upon response
-        axios({
-            method: 'POST' ,
-            url: '/gallery',
-            data: this.state
-        }).then((response) => {
-            //run get request to update changes on DOM
-            this.props.getGallery();
-            console.log('back from server POST with', response.statusText);
-            //set state back to empty strings to clear inputs
-            this.setState({
-                path: '',
-                description: ''
-            })//end setState
-        }).catch((error) => {
-            alert('error on POST');
-            console.log(error);
-        }) //end axios POST
+       this.props.postItem(this.state);
     }//end handleSubmit
 
 

@@ -3,6 +3,8 @@ img {
     width: auto;
 }
 
-
-
-
+.description{
+  width: 200px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
