@@ -8,47 +8,38 @@ My first build with react and material UI.  This app allows a user to add photos
 
 ## Screen Shot
 
-Include one or two screen shots of your project here (optional). Remove if unused.
+![Screenshot](images/GalleryScreenShot.png)
 
 ### Prerequisites
 
-Link to software that is required to install the app (e.g. node).
-
-- [Node.js](https://nodejs.org/en/)
-- 
+- [Node.js](https://nodejs.org/en/) 
 
 ## Installation
 
 
 1. Create a database named `react_gallery`,
-2. The queries in the `tables.sql` file are set up to create all the necessary tables and populate the needed data to allow the application to run correctly. The project is built on [Postgres](https://www.postgresql.org/download/), so you will need to make sure to have that installed. We recommend using Postico to run those queries as that was used to create the queries, 
+2. The queries in the `tables.sql` file are set up to create all the necessary tables and populate the needed data to allow the application to run correctly.  Feel free to add in the photos included, or to begin with a blank app and upload your own! The project is built on [Postgres](https://www.postgresql.org/download/), so you will need to make sure to have that installed. We recommend using Postico to run those queries as that was used to create the queries, 
 3. Open up your editor of choice and run an `npm install`
 4. Run `npm run server` in your terminal
 5. Run `npm run client` in your terminal
 6. The `npm run client` command will open up a new browser tab for you!
 
 ## Usage
-How does someone use this application? Tell a user story here.
 
-1. xxx
-2. xxx
-3. xxx
-4. xxx
-5. xxx
-6. xxx
-
+1. Input a new photo with an absolute url and description
+2. When satisfied with the url and description, click 'Submit'
+3. like a photo by clicking the heart icon
+4. delete a photo by clicking the trash icon
+5. Display the description by clicking an image
 
 ## Built With
 
-List technologies and frameworks here
-
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
-
-_Note, include this only if you have a license file. GitHub will generate one for you if you want!_
+-   React
+-   Axios
+-   Material UI
+-   Postgres
+-   Express
 
 ## Acknowledgement
-Thanks to [Prime Digital Academy](www.primeacademy.io) who equipped and helped me to make this application a reality. (Thank your people)
+Thanks to [Prime Digital Academy](www.primeacademy.io) who equipped and helped me to make this application a reality. Special thanks to Dev, Mary, and all my parakeets in the Paxos Cohort! Bird Up!
 
-## Support
-If you have suggestions or issues, please email me at [youremail@whatever.com](www.google.com)

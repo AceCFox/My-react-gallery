@@ -50,10 +50,12 @@ class GalleryItem extends Component {
             />
         } else {
             photo = 
-                 <div className = "description">
+                 <CardContent className = "description">
+                    <br/>
+                    <br/>
                     <h3 >{this.props.thisItem.description}</h3>
                     <br/>
-                </div>
+                </CardContent>
         }//end conditional
 
         //conditionally set loved statement to unliked/singular/plural messages
@@ -73,7 +75,7 @@ class GalleryItem extends Component {
                 handleClick function toggles state when this photo/description is clicked*/}
                 {photo}
             </CardActionArea>
-            <CardContent>
+            <CardContent className = "buttonLand">
                 {/*icon buttons below are sourced from MUI and will run the delete and like calls
                 passed as props from grandparent app.js*/}
                 <IconButton color="secondary" aria-label="like" onClick = {this.handleLike}>
