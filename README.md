@@ -8,7 +8,7 @@ My first build with react and material UI.  This app allows a user to add photos
 
 ## Screen Shot
 
-![Screenshot](images/GalleryScreenShot.png)
+![Screenshot](public/images/GalleryScreenShot.png)
 
 ### Prerequisites
 
